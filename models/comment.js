@@ -11,7 +11,7 @@ const ReplySchema = new Schema(
     replyBody: {
       type: String,
       required: true,
-      trim: true
+      trim: true,
     },
     writtenBy: {
       type: String,
@@ -23,12 +23,6 @@ const ReplySchema = new Schema(
       get: createdAtVal => dateFormat(createdAtVal)
     }
   },
-  {
-    toJSON: {
-      getters: true
-    }
-  }
-);
   {
     toJSON: {
       getters: true
